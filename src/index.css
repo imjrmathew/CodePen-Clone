@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Product Sans';
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.pane {
+  height: 50vh;
+  display: flex;
+}
+
+.top-pane {
+  background: rgb(46, 45, 45);
+}
+
+.container {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+  background-color: rgb(46, 45, 45);
+}
+
+.container.collapsed {
+  flex-grow: 0;
+}
+
+.container.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
+}
+
+.title {
+  color: white;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  padding: .9rem;
+  background-color: black;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.title button {
+  margin-left: .5rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.CodeMirror {
+  height: 100% !important;
+}
+
+.code-wrapper {
+  flex-grow: 1;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  overflow: hidden;
+}
